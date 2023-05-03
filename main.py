@@ -306,5 +306,34 @@ class Transactions(Resource):
 
 api.add_resource(Transactions, "/transactions")
 
+
+@swagger.model
+class User:
+    resource_fields = {
+        'id': fields.Integer,
+        'email': fields.String,
+        'current_balance': fields.Integer,
+        'pin_hash': fields.String
+    }
+
+
+@swagger.model
+class UserCurrentBalance:
+    resource_fields = {
+        'current_balance': fields.Integer
+    }
+
+
+@swagger.model
+class Transaction:
+    resource_fields = {
+        'id': fields.Integer,
+        'tx_type': fields.String,
+        'amount': fields.Integer,
+        'tx_date': fields.String,
+        'user_id': fields.Integer
+    }
+
+
 if __name__ == "__main__":
     app.run(debug=True)
