@@ -1,0 +1,8 @@
+#Installation
+1. Run "pip3 install -r requirements.txt" in command line
+2. Run "pip3 install flask-restful-swagger" in command line
+3. Run "python3 main.py" in command line to run app
+4. Run "python3 test.py" to test CWS
+
+#API DOC
+http://127.0.0.1:5000/api/spec.json
